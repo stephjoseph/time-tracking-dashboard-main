@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="../images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="../dist/style.css" />
+
+    <title>Frontend Mentor | Time tracking dashboard</title>
+  </head>
+  <body class="font-['Rubik'] bg-[#0E1323] w-full h-full">
+    <main class="mx-[6.4vw] my-[21.6vw] grid grid-cols-1 gap-6 xl:mx-[11.45vw] xl:my-[17.56vw] xl:w-[77.08vw] xl:h-[35.97vw] xl:grid-cols-4 xl:grid-rows-2 xl:gap-[30px]">
+      <div class="bg-[#1C204B] w-[87.2vw] h-[54.13vw] rounded-[15px] xl:row-span-2 xl:w-[17.70vw] xl:h-[35.97vw] ">
+        <div
+          class="mb-6 px-8 py-[35px] flex gap-5 items-center bg-[#5747EA] w-full h-[35.46vw] rounded-[15px] xl:mb-[26px] xl:pl-[32px] xl:pt-[37px] xl:pr-[84px] xl:pb-[80px]  xl:flex-col xl:justify-start xl:items-start xl:gap-[43px] xl:w-[17.70vw] xl:h-[24.58vw]"
+        >
+          <div class="w-16 h-16 xl:w-[78px] xl:h-[78px]">
+            <img
+              class="border-[3px] border-solid border-white rounded-full"
+              src="../images/image-jeremy.png"
+              alt="picture of Jeremy"
+            />
+          </div>
+          <div class="flex flex-col gap-1 xl:gap-[3px]">
+            <h1
+              class="font-normal text-[15px] leading-[18px] tracking-normal text-[#BBC0FF]"
+            >
+              Report for <br />
+              <span
+                class="font-light text-2xl leading-[28px] tracking-normal text-white xl:text-[40px] xl:leading-[47px]"
+                >Jeremy Robson</span
+              >
+            </h1>
+          </div>
+        </div>
+        <div class="flex justify-center xl:ml-[32px] xl:flex-col xl:gap-[21px] xl:justify-start">
+          <button
+            id="daily-btn"
+            class="timeframe w-[29.06vw] h-[5.6vw] font-normal text-lg leading-[21px] text-[#7078C9] xl:w-[2.84vw] xl:h-auto active:text-white"
+          >
+            Daily
+          </button>
+          <button
+            id="weekly-btn"
+            class="timeframe active w-[29.06vw] h-[5.6vw] font-normal text-lg leading-[21px] text-white xl:w-[4.02vw] xl:h-auto active:text-white"
+          >
+            Weekly
+          </button>
+          <button
+            id="monthly-btn"
+            class="timeframe w-[29.06vw] h-[5.6vw] font-normal text-lg leading-[21px] text-[#7078C9] xl:w-[4.72vw] xl:h-auto active:text-white"
+          >
+            Monthly
+          </button>
+        </div>
+      </div>
+
+      <div
+        class="bg-[#FF8B64] pt-[38px] rounded-[15px] w-full h-[42.66vw] relative z-0  overflow-hidden xl:row-span-1 xl:pt-[45px] xl:h-[16.94vw]"
+      >
+        <div class="absolute left-[61.75vw] top-[-2.9vw] z-[-1] xl:left-[11.08vw] xl:top-[-0.75vw]">
+          <img src="../images/icon-work.svg" alt="" />
+        </div>
+        <div
+          class="px-[6.4vw] py-[7.46vw] flex flex-col gap-[6px] bg-[#1C204B] z-[-10] w-full h-full rounded-[15px]  xl:px-[2.04vw] xl:py-[2.01vw] xl:gap-6 "
+        >
+          <div class="flex items-center justify-between">
+            <h2
+              class="title font-medium text-lg leading-[21px] tracking-normal text-white"
+            >
+              Work
+            </h2>
+            <button type="button" class="group">
+              <svg width="21" height="5" xmlns="http://www.w3.org/2000/svg">
+                <path class="group-active:fill-white" d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z" fill="#BBC0FF" fill-rule="evenodd"/>
+              </svg>
+            </button>
+          </div>
+          <div class="flex items-center justify-between xl:flex-col xl:justify-center xl:items-start xl:gap-2">
+            <p
+              class="current-time font-light text-[32px] leading-[38px] tracking-normal text-white xl:text-[56px] xl:leading-[66px]"
+            >
+              32hrs
+            </p>
+            <p
+              class="previous-time font-normal text-[15px] leading-[18px] tracking-normal text-[#BBC0FF]"
+            >
+              Last Week - 36hrs
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="bg-[#55C2E6] pt-[38px] rounded-[15px] w-full h-[42.66vw] relative z-10 overflow-hidden xl:pt-[45px] xl:h-[16.94vw]"
+      >
+        <div class="absolute w-[24vw] h-[24vw] left-[60.26vw] top-[-3.81vw] z-[-1] xl:left-[10.69vw] xl:top-[-0.75vw]">
+          <img src="../images/icon-play.svg" alt="" />
+        </div>
+        <div
+          class="px-[6.4vw] py-[7.46vw] flex flex-col gap-[6px] bg-[#1C204B] w-full h-full rounded-[15px] z-10  xl:px-[2.04vw] xl:py-[2.01vw] xl:gap-6"
+        >
+          <div class="flex items-center justify-between ">
+            <h2
+              class="title font-medium text-lg leading-[21px] tracking-normal text-white"
+            >
+              Play
+            </h2>
+            <button type="button" class="group">
+              <svg width="21" height="5" xmlns="http://www.w3.org/2000/svg">
+                <path class="group-active:fill-white" d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z" fill="#BBC0FF" fill-rule="evenodd"/>
+              </svg>
+            </button>
+          </div>
+          <div class="flex items-center justify-between xl:flex-col xl:justify-center xl:items-start xl:gap-2">
+            <p
+              class="current-time font-light text-[32px] leading-[38px] tracking-normal text-white xl:text-[56px] xl:leading-[66px]"
+            >
+              10hrs
+            </p>
+            <p
+              class="previous-time font-normal text-[15px] leading-[18px] tracking-normal text-[#BBC0FF]"
+            >
+              Last Week - 36hrs
+            </p>
+          </div>
+        </div>
+      </div>
+      <div
+        class="bg-[#FF5E7D] pt-[38px] rounded-[15px] w-full h-[42.66vw] relative z-10 overflow-hidden xl:pt-[45px] xl:h-[16.94vw]"
+      >
+        <div class="absolute left-[61.75vw] top-[-2.9vw] z-[-1] xl:left-[11.10vw] xl:top-[-0.42vw]">
+          <img src="../images/icon-study.svg" alt="" />
+        </div>
+        <div
+          class="px-[6.4vw] py-[7.46vw] flex flex-col gap-[6px] bg-[#1C204B] w-full h-full rounded-[15px] z-10  xl:px-[2.04vw] xl:py-[2.01vw] xl:gap-6"
+        >
+          <div class="flex items-center justify-between">
+            <h2
+              class="title font-medium text-lg leading-[21px] tracking-normal text-white"
+            >
+              Study
+            </h2>
+            <button type="button" class="group">
+              <svg width="21" height="5" xmlns="http://www.w3.org/2000/svg">
+                <path class="group-active:fill-white" d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z" fill="#BBC0FF" fill-rule="evenodd"/>
+              </svg>
+            </button>
+          </div>
+          <div class="flex items-center justify-between xl:flex-col xl:justify-center xl:items-start xl:gap-2">
+            <p
+              class="current-time font-light text-[32px] leading-[38px] tracking-normal text-white xl:text-[56px] xl:leading-[66px]"
+            >
+              4hrs
+            </p>
+            <p
+              class="previous-time font-normal text-[15px] leading-[18px] tracking-normal text-[#BBC0FF]"
+            >
+              Last Week - 7hrs
+            </p>
+          </div>
+        </div>
+      </div>
+      <div
+        class="bg-[#4BCF82] pt-[38px] rounded-[15px] w-full h-[42.66vw] relative z-10 overflow-hidden xl:pt-[45px] xl:h-[16.94vw]"
+      >
+        <div class="absolute left-[61.25vw] top-[-0.112vw] z-[-1] xl:left-[10.95vw] xl:top-[-0.02vw]">
+          <img src="../images/icon-exercise.svg" alt="" />
+        </div>
+        <div
+          class="px-[6.4vw] py-[7.46vw] flex flex-col gap-[6px] bg-[#1C204B] w-full h-full rounded-[15px] z-10  xl:px-[2.04vw] xl:py-[2.01vw] xl:gap-6"
+        >
+          <div class="flex items-center justify-between">
+            <h2
+              class="title font-medium text-lg leading-[21px] tracking-normal text-white"
+            >
+              Exercise
+            </h2>
+            <button type="button" class="group">
+              <svg width="21" height="5" xmlns="http://www.w3.org/2000/svg">
+                <path class="group-active:fill-white" d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z" fill="#BBC0FF" fill-rule="evenodd"/>
+              </svg>
+            </button>
+          </div>
+          <div class="flex items-center justify-between xl:flex-col xl:justify-center xl:items-start xl:gap-2">
+            <p
+              class="current-time font-light text-[32px] leading-[38px] tracking-normal text-white  xl:text-[56px] xl:leading-[66px]"
+            >
+              4hrs
+            </p>
+            <p
+              class="previous-time font-normal text-[15px] leading-[18px] tracking-normal text-[#BBC0FF]"
+            >
+              Last Week - 5hrs
+            </p>
+          </div>
+        </div>
+      </div>
+      <div
+        class="bg-[#7335D2] pt-[38px] rounded-[15px] w-full h-[42.66vw] relative z-10 overflow-hidden xl:pt-[45px] xl:h-[16.94vw]"
+      >
+        <div class="absolute left-[63.97vw] top-[-4vw] z-[-1] xl:left-[11.66vw] xl:top-[-1.04vw]">
+          <img src="../images/icon-social.svg" alt="" />
+        </div>
+        <div
+          class="px-[6.4vw] py-[7.46vw] flex flex-col gap-[6px] bg-[#1C204B] w-full h-full rounded-[15px] z-10  xl:px-[2.04vw] xl:py-[2.01vw] xl:gap-6"
+        >
+          <div class="flex items-center justify-between">
+            <h2
+              class="title font-medium text-lg leading-[21px] tracking-normal text-white"
+            >
+              Social
+            </h2>
+            <button type="button" class="group">
+              <svg width="21" height="5" xmlns="http://www.w3.org/2000/svg">
+                <path class="group-active:fill-white" d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z" fill="#BBC0FF" fill-rule="evenodd"/>
+              </svg>
+            </button>
+          </div>
+          <div class="flex items-center justify-between xl:flex-col xl:justify-center xl:items-start xl:gap-2">
+            <p
+              class="current-time font-light text-[32px] leading-[38px] tracking-normal text-white xl:text-[56px] xl:leading-[66px]"
+            >
+              5hrs
+            </p>
+            <p
+              class="previous-time font-normal text-[15px] leading-[18px] tracking-normal text-[#BBC0FF]"
+            >
+              Last Week - 10hrs
+            </p>
+          </div>
+        </div>
+      </div>
+      <div
+        class="bg-[#F1C75B] pt-[38px] rounded-[15px] w-full h-[42.66vw] relative z-10 overflow-hidden xl:pt-[45px] xl:h-[16.94vw]"
+      >
+        <div class="absolute left-[64.75vw] top-[-2.9vw] z-[-1] xl:left-[11.66vw] xl:top-[-1.04vw]">
+          <img src="../images/icon-self-care.svg" alt="" />
+        </div>
+        <div
+          class="px-[6.4vw] py-[7.46vw] flex flex-col gap-[6px] bg-[#1C204B] w-full h-full rounded-[15px] z-10  xl:px-[2.04vw] xl:py-[2.01vw] xl:gap-6"
+        >
+          <div class="flex items-center justify-between">
+            <h2
+              class="title font-medium text-lg leading-[21px] tracking-normal text-white"
+            >
+              Self Care
+            </h2>
+            <button type="button" class="group">
+              <svg width="21" height="5" xmlns="http://www.w3.org/2000/svg">
+                <path class="group-active:fill-white" d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z" fill="#BBC0FF" fill-rule="evenodd"/>
+              </svg>
+            </button>
+          </div>
+          <div class="flex items-center justify-between xl:flex-col xl:justify-center xl:items-start xl:gap-2">
+            <p
+              class="current-time font-light text-[32px] leading-[38px] tracking-normal text-white xl:text-[56px] xl:leading-[66px]"
+            >
+              2hrs
+            </p>
+            <p
+              class="previous-time font-normal text-[15px] leading-[18px] tracking-normal text-[#BBC0FF]"
+            >
+              Last Week - 2hrs
+            </p>
+          </div>
+        </div>
+      </div>
+      </div>
+      
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
